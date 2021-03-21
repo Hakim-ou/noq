@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NoQ</string>
+    <string name="new_turn">Nouveau Tour</string>
+    <string name="next">suivant</string>
+    <string name="actuel_turn">tour actuel</string>
+    <string name="waiting"> en attente</string>
+    <string name="titleInput"> Le Titre De Votre Evenement</string>
+    <string name="newService"> créer évenement</string>
+    <string name="titleImpermitted"> veuillez entrer un titre valide</string>
+    <string name="toZero"> remmetre compteur à zero</string>
+
+</resources>

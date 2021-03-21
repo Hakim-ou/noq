@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>70</x>
+      <y>20</y>
+      <w>650</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>cancel turn
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>80</x>
+      <y>30</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>limit_in_place is the number of people beyond wich the turn is no more too close 
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>270</x>
+      <y>100</y>
+      <w>430</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>def cancel_turn(canceled_turn):
+    while canceled_turn in limit_stability:
+        turn = next_in_place(canceled_turn).turn
+        next_in_place(canceled_turn).turn = canceled_turn
+        canceled_turn = turn
+    end_while
+end
+
+bg=black
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NoQ</string>
+    <string name="scan">Prendre un tour</string>
+    <string name="apiUrl">http://192.168.1.115/</string>
+    <string name="urlHO">http://127.0.1.2/</string>
+    <string name="reload">Recharger</string>
+    <string name="noConn">Pas de connexion internet. Rechargez la page après connexion svp !</string>
+</resources>

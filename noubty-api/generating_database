@@ -1,0 +1,68 @@
+create TABLE service (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    event_id int NOT NULL,
+    title varchar(250) NOT NULL,
+    description text,
+    schedule text,
+    turn int NOT NULL DEFAULT 0,
+    turn_time datetime NOT NULL DEFAULT now(),
+    additional_information text,
+    state bool NOT NULL DEFAULT false,
+    stability_limit int NOT NULL DEFAULT 3
+);
+
+create TABLE event (
+                         id int PRIMARY KEY AUTO_INCREMENT,
+                         title varchar(250) NOT NULL,
+                         description text,
+                         schedule text,
+                         owner_code varchar(250) NOT NULL,
+                         servent_code varchar(250) NOT NULL
+);
+
+
+create TABLE turn (
+                         id int PRIMARY KEY AUTO_INCREMENT,
+                         service_id int NOT NULL,
+                         participant_id varchar(250) NOT NULL,
+                         turn_number int NOT NULL,
+                         additional_information text,
+                         in_place bool NOT NULL DEFAULT false,
+                         turn_qr_code varchar(250) NOT NULL,
+                         message varchar(250) NOT NULL,
+                         time time ,
+                         estimation_time datetime NOT NULL DEFAULT now(),
+                         validation bool NOT NULL DEFAULT false
+
+);
+
+
+create TABLE owning (
+                         id int PRIMARY KEY AUTO_INCREMENT,
+                         event_id int NOT NULL,
+                         owner_id int NOT NULL
+);
+
+
+create TABLE owner (
+                        id int PRIMARY KEY AUTO_INCREMENT,
+                        email varchar(250) NOT NULL,
+                        password varchar(250) NOT NULL
+);
+
+
+create TABLE servent (
+                        id int PRIMARY KEY AUTO_INCREMENT,
+                        event_id int NOT NULL,
+                        servent_id int NOT NULL,
+                        name varchar(250) NOT NULL
+);
+
+
+create TABLE qr_code(
+                         id int PRIMARY KEY AUTO_INCREMENT,
+                         qr_code varchar(250) NOT NULL,
+                         event_id int NOT NULL,
+                         type varchar(250) NOT NULL
+);
+
